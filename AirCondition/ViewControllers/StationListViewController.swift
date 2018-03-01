@@ -39,11 +39,11 @@ extension StationListViewController {
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "StationListCell") as? StationListCell else {
-                return UITableViewCell()
-            }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StationListCell") as? StationListCell else {
+            return UITableViewCell()
+        }
             
-        cell.viewModel = viewModel as? StationListCellViewModel
+        cell.viewModel = viewModel.stationListCells.value[indexPath.row] 
         return cell
     }
 }

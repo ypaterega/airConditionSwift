@@ -30,6 +30,7 @@ class HttpService {
     
     typealias GetStationsCompletion = (_ result: [HSStation]) -> Void
     typealias GetStationDetailsCompletion = (_ result: [HSStationDetails]) -> Void
+    typealias GetAirConditionCompletion = (_ result: [HSAirConditionIndex]) -> Void
     
     func getStations(completion: @escaping GetStationsCompletion) {
         
@@ -47,6 +48,17 @@ class HttpService {
         let stationDetailsUrl = mainAdressUrl + sensorsStationUrl + stationId
         
         Alamofire.request(stationDetailsUrl, method: .get).responseArray { (response : DataResponse <[HSStationDetails]>) in
+            if let jsonArray = response.value {
+                completion(jsonArray)
+            }
+        }
+    }
+    
+    func getSensorsData(stationId: String , completion: @escaping GetAirConditionCompletion) {
+        
+        let airConditionUrl = mainAdressUrl + airConditionStationUrl + stationId
+        
+        Alamofire.request(airConditionUrl, method: .get).responseArray { (response : DataResponse <[HSAirConditionIndex]>) in
             if let jsonArray = response.value {
                 completion(jsonArray)
             }

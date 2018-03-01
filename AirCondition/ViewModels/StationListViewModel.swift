@@ -10,9 +10,6 @@ import Foundation
 
 class StationListViewModel {
     
-    var allStationData: [HSStation] = [HSStation]()
-    var stationModelData: Station?
-    
     let showLoading: Observer = Observer(false)
     
     let stationListCells = Observer([StationListCellViewModel]())
@@ -24,22 +21,17 @@ class StationListViewModel {
     
     func onLoad() {
         httpService.getStations(completion: { [weak self] result in
-            do {
-                self?.allStationData = result
-                self?.setCellsData()
-            } catch {
-            }
+            self?.setCellsData(from: result)
         })
     }
     
-    private func setCellsData() {
-        for stationData in allStationData {
-            stationModelData?.city = stationData.city?.commune?.communeName
-            stationModelData?.addressStreet = stationData.addressStreet
-            stationModelData?.gegrLon = stationData.gegrLon
-            stationModelData?.gegrLat = stationData.gegrLat
+    private func setCellsData(from apiModel: [HSStation]) {
+        stationListCells.value = apiModel.map { model in
+            Station(stationName: model.stationName,
+                    gegrLat: model.gegrLat,
+                    gegrLon: model.gegrLon,
+                    city: model.city?.commune?.communeName,
+                    addressStreet: model.addressStreet)
         }
     }
 }
-
-

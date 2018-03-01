@@ -10,6 +10,8 @@
 		1A0A952720478323007561F8 /* HSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A952620478323007561F8 /* HSStation.swift */; };
 		1A0A952920478553007561F8 /* HSCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A952820478553007561F8 /* HSCity.swift */; };
 		1A0A952B2047864D007561F8 /* HSCommune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A952A2047864D007561F8 /* HSCommune.swift */; };
+		1A31F18C2048AC9500C8EDBA /* HSStIndexLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31F18B2048AC9500C8EDBA /* HSStIndexLevel.swift */; };
+		1A31F18F2048BB6B00C8EDBA /* CellIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A31F18E2048BB6B00C8EDBA /* CellIcons.xcassets */; };
 		1ADFCB202047713C00FAC3C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */; };
 		1ADFCB252047713C00FAC3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB232047713C00FAC3C8 /* Main.storyboard */; };
 		1ADFCB272047713C00FAC3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB262047713C00FAC3C8 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		1A0A952620478323007561F8 /* HSStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStation.swift; sourceTree = "<group>"; };
 		1A0A952820478553007561F8 /* HSCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCity.swift; sourceTree = "<group>"; };
 		1A0A952A2047864D007561F8 /* HSCommune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCommune.swift; sourceTree = "<group>"; };
+		1A31F18B2048AC9500C8EDBA /* HSStIndexLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStIndexLevel.swift; sourceTree = "<group>"; };
+		1A31F18E2048BB6B00C8EDBA /* CellIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CellIcons.xcassets; sourceTree = "<group>"; };
 		1ADFCB1C2047713C00FAC3C8 /* AirCondition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirCondition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ADFCB242047713C00FAC3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +119,14 @@
 			path = NetworkingModel;
 			sourceTree = "<group>";
 		};
+		1A31F18D2048BB2600C8EDBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A31F18E2048BB6B00C8EDBA /* CellIcons.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1ADFCB132047713C00FAC3C8 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +152,7 @@
 		1ADFCB1E2047713C00FAC3C8 /* AirCondition */ = {
 			isa = PBXGroup;
 			children = (
+				1A31F18D2048BB2600C8EDBA /* Resources */,
 				F98E2698204840A50094C980 /* Model */,
 				F98E269320483AAB0094C980 /* Common */,
 				F98E2690204837BA0094C980 /* Controls */,
@@ -218,6 +231,7 @@
 				F9EDBA4E20481B0A00B398C1 /* HSSensorsData.swift */,
 				F9EDBA5020481B1A00B398C1 /* HSSensorsDataValue.swift */,
 				F9EDBA4C20481AB900B398C1 /* HSAirConditionIndex.swift */,
+				1A31F18B2048AC9500C8EDBA /* HSStIndexLevel.swift */,
 			);
 			path = HSModels;
 			sourceTree = "<group>";
@@ -376,6 +390,7 @@
 			files = (
 				1ADFCB2A2047713C00FAC3C8 /* LaunchScreen.storyboard in Resources */,
 				1ADFCB272047713C00FAC3C8 /* Assets.xcassets in Resources */,
+				1A31F18F2048BB6B00C8EDBA /* CellIcons.xcassets in Resources */,
 				1ADFCB252047713C00FAC3C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +498,7 @@
 				1A0A952720478323007561F8 /* HSStation.swift in Sources */,
 				F98E2692204837E20094C980 /* StationListCell.swift in Sources */,
 				F98E269A204840B50094C980 /* Station.swift in Sources */,
+				1A31F18C2048AC9500C8EDBA /* HSStIndexLevel.swift in Sources */,
 				F9CDF643204825EA007CDB00 /* StationListViewController.swift in Sources */,
 				1A0A952920478553007561F8 /* HSCity.swift in Sources */,
 				F98E269720483C960094C980 /* StationListCellViewModel.swift in Sources */,

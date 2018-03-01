@@ -25,10 +25,20 @@ class StationListCell: UITableViewCell {
     }
     
     func setCellViewModel() {
-        stationNameLabel?.text = viewModel?.stationItem.stationName
-        cityLabel?.text = viewModel?.stationItem.city
-        latitudeLabel?.text = viewModel?.stationItem.gegrLat
-        longitudeLabel?.text = viewModel?.stationItem.gegrLon
+    
+        stationImage.image = UIImage(named: "ic_place")
+        
+        let attributes : [NSAttributedStringKey : Any] = [NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : UIFont.systemFont(ofSize: 12.0),
+                                                          NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : UIColor.black]
+        
+        if let stationItem =  viewModel?.stationItem {
+    
+            stationNameLabel?.attributedText =  NSAttributedString(string: stationItem.stationName!, attributes: attributes)
+            cityLabel?.attributedText = NSAttributedString(string: stationItem.city!, attributes: attributes)
+            latitudeLabel?.attributedText = NSAttributedString(string: stationItem.gegrLat!, attributes: attributes)
+            longitudeLabel?.attributedText = NSAttributedString(string: stationItem.gegrLon!, attributes: attributes)
+    
+        }
     }
 }
 

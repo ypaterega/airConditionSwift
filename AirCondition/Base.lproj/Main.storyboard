@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Station list-->
         <scene sceneID="00g-Sh-97Z">
             <objects>
                 <tableViewController id="0P0-hM-oqS" customClass="StationListViewController" customModule="AirCondition" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,8 +47,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqz-l7-sb0">
-                                                    <rect key="frame" x="0.0" y="29" width="84" height="20.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sqz-l7-sb0">
+                                                    <rect key="frame" x="0.0" y="29" width="94" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrF-5F-hWl">
                                                             <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -57,7 +57,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-se-QpB">
-                                                            <rect key="frame" x="42" y="0.0" width="42" height="20.5"/>
+                                                            <rect key="frame" x="52" y="0.0" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="0P0-hM-oqS" id="vYN-ER-YZw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hcS-SH-eyD"/>
+                    <navigationItem key="navigationItem" title="Station list" id="hcS-SH-eyD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C81-iN-4wO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

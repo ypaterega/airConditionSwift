@@ -31,5 +31,4 @@ class Observer<T> {
         self.listener = listener
         listener?(value)
     }
-    
 }
