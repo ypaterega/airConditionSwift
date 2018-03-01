@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A0A952720478323007561F8 /* HSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A952620478323007561F8 /* HSStation.swift */; };
+		1A0A952920478553007561F8 /* HSCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A952820478553007561F8 /* HSCity.swift */; };
+		1A0A952B2047864D007561F8 /* HSCommune.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A952A2047864D007561F8 /* HSCommune.swift */; };
+		1ADFCB202047713C00FAC3C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */; };
+		1ADFCB252047713C00FAC3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB232047713C00FAC3C8 /* Main.storyboard */; };
+		1ADFCB272047713C00FAC3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB262047713C00FAC3C8 /* Assets.xcassets */; };
+		1ADFCB2A2047713C00FAC3C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB282047713C00FAC3C8 /* LaunchScreen.storyboard */; };
+		1ADFCB352047713C00FAC3C8 /* AirConditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFCB342047713C00FAC3C8 /* AirConditionTests.swift */; };
+		1ADFCB402047713C00FAC3C8 /* AirConditionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFCB3F2047713C00FAC3C8 /* AirConditionUITests.swift */; };
+		1ADFCB50204774FE00FAC3C8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFCB4F204774FE00FAC3C8 /* HttpService.swift */; };
+		3C3B57EE0C36E53F18E77BB5 /* Pods_AirCondition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE84F48E0D790A45A216CED4 /* Pods_AirCondition.framework */; };
+		F98E2692204837E20094C980 /* StationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E2691204837E20094C980 /* StationListCell.swift */; };
+		F98E269520483ABD0094C980 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E269420483ABD0094C980 /* Observer.swift */; };
+		F98E269720483C960094C980 /* StationListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E269620483C960094C980 /* StationListCellViewModel.swift */; };
+		F98E269A204840B50094C980 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98E2699204840B50094C980 /* Station.swift */; };
+		F993322A2048131100CC8871 /* HSStationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99332292048131100CC8871 /* HSStationDetails.swift */; };
+		F993322C204814DF00CC8871 /* HSStationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F993322B204814DF00CC8871 /* HSStationParameters.swift */; };
+		F9CDF6412048256C007CDB00 /* StationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDF6402048256C007CDB00 /* StationListViewModel.swift */; };
+		F9CDF643204825EA007CDB00 /* StationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CDF642204825EA007CDB00 /* StationListViewController.swift */; };
+		F9EDBA4D20481AB900B398C1 /* HSAirConditionIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDBA4C20481AB900B398C1 /* HSAirConditionIndex.swift */; };
+		F9EDBA4F20481B0A00B398C1 /* HSSensorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDBA4E20481B0A00B398C1 /* HSSensorsData.swift */; };
+		F9EDBA5120481B1A00B398C1 /* HSSensorsDataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDBA5020481B1A00B398C1 /* HSSensorsDataValue.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1ADFCB312047713C00FAC3C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ADFCB142047713C00FAC3C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ADFCB1B2047713C00FAC3C8;
+			remoteInfo = AirCondition;
+		};
+		1ADFCB3C2047713C00FAC3C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ADFCB142047713C00FAC3C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ADFCB1B2047713C00FAC3C8;
+			remoteInfo = AirCondition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A0A952620478323007561F8 /* HSStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStation.swift; sourceTree = "<group>"; };
+		1A0A952820478553007561F8 /* HSCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCity.swift; sourceTree = "<group>"; };
+		1A0A952A2047864D007561F8 /* HSCommune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSCommune.swift; sourceTree = "<group>"; };
+		1ADFCB1C2047713C00FAC3C8 /* AirCondition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirCondition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1ADFCB242047713C00FAC3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1ADFCB262047713C00FAC3C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ADFCB292047713C00FAC3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1ADFCB2B2047713C00FAC3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADFCB302047713C00FAC3C8 /* AirConditionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirConditionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADFCB342047713C00FAC3C8 /* AirConditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionTests.swift; sourceTree = "<group>"; };
+		1ADFCB362047713C00FAC3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADFCB3B2047713C00FAC3C8 /* AirConditionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirConditionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADFCB3F2047713C00FAC3C8 /* AirConditionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirConditionUITests.swift; sourceTree = "<group>"; };
+		1ADFCB412047713C00FAC3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADFCB4F204774FE00FAC3C8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		6858E3DF7A671EF4E1DBDEAC /* Pods-AirCondition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirCondition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirCondition/Pods-AirCondition.debug.xcconfig"; sourceTree = "<group>"; };
+		CC0B2C5A05C5D9901F33CF24 /* Pods-AirCondition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirCondition.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirCondition/Pods-AirCondition.release.xcconfig"; sourceTree = "<group>"; };
+		F98E2691204837E20094C980 /* StationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListCell.swift; sourceTree = "<group>"; };
+		F98E269420483ABD0094C980 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		F98E269620483C960094C980 /* StationListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListCellViewModel.swift; sourceTree = "<group>"; };
+		F98E2699204840B50094C980 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		F99332292048131100CC8871 /* HSStationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStationDetails.swift; sourceTree = "<group>"; };
+		F993322B204814DF00CC8871 /* HSStationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSStationParameters.swift; sourceTree = "<group>"; };
+		F9CDF6402048256C007CDB00 /* StationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewModel.swift; sourceTree = "<group>"; };
+		F9CDF642204825EA007CDB00 /* StationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewController.swift; sourceTree = "<group>"; };
+		F9EDBA4C20481AB900B398C1 /* HSAirConditionIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSAirConditionIndex.swift; sourceTree = "<group>"; };
+		F9EDBA4E20481B0A00B398C1 /* HSSensorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSSensorsData.swift; sourceTree = "<group>"; };
+		F9EDBA5020481B1A00B398C1 /* HSSensorsDataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSSensorsDataValue.swift; sourceTree = "<group>"; };
+		FE84F48E0D790A45A216CED4 /* Pods_AirCondition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirCondition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1ADFCB192047713C00FAC3C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C3B57EE0C36E53F18E77BB5 /* Pods_AirCondition.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADFCB2D2047713C00FAC3C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADFCB382047713C00FAC3C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A0A952520478198007561F8 /* NetworkingModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9480DAD2047F6C400387E81 /* HSModels */,
+			);
+			path = NetworkingModel;
+			sourceTree = "<group>";
+		};
+		1ADFCB132047713C00FAC3C8 = {
+			isa = PBXGroup;
+			children = (
+				1ADFCB1E2047713C00FAC3C8 /* AirCondition */,
+				1ADFCB332047713C00FAC3C8 /* AirConditionTests */,
+				1ADFCB3E2047713C00FAC3C8 /* AirConditionUITests */,
+				1ADFCB1D2047713C00FAC3C8 /* Products */,
+				1EE8BE1592A2298717191D3C /* Pods */,
+				8D571F7209ABDCA9FFF49988 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1ADFCB1D2047713C00FAC3C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFCB1C2047713C00FAC3C8 /* AirCondition.app */,
+				1ADFCB302047713C00FAC3C8 /* AirConditionTests.xctest */,
+				1ADFCB3B2047713C00FAC3C8 /* AirConditionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ADFCB1E2047713C00FAC3C8 /* AirCondition */ = {
+			isa = PBXGroup;
+			children = (
+				F98E2698204840A50094C980 /* Model */,
+				F98E269320483AAB0094C980 /* Common */,
+				F98E2690204837BA0094C980 /* Controls */,
+				F9EDBA5420481EDA00B398C1 /* ViewModels */,
+				F9EDBA5220481EC100B398C1 /* ViewControllers */,
+				1A0A952520478198007561F8 /* NetworkingModel */,
+				1ADFCB4E2047740D00FAC3C8 /* Networking */,
+				1ADFCB4D204773FD00FAC3C8 /* App */,
+				1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */,
+				1ADFCB232047713C00FAC3C8 /* Main.storyboard */,
+				1ADFCB262047713C00FAC3C8 /* Assets.xcassets */,
+				1ADFCB282047713C00FAC3C8 /* LaunchScreen.storyboard */,
+				1ADFCB2B2047713C00FAC3C8 /* Info.plist */,
+			);
+			path = AirCondition;
+			sourceTree = "<group>";
+		};
+		1ADFCB332047713C00FAC3C8 /* AirConditionTests */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFCB342047713C00FAC3C8 /* AirConditionTests.swift */,
+				1ADFCB362047713C00FAC3C8 /* Info.plist */,
+			);
+			path = AirConditionTests;
+			sourceTree = "<group>";
+		};
+		1ADFCB3E2047713C00FAC3C8 /* AirConditionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFCB3F2047713C00FAC3C8 /* AirConditionUITests.swift */,
+				1ADFCB412047713C00FAC3C8 /* Info.plist */,
+			);
+			path = AirConditionUITests;
+			sourceTree = "<group>";
+		};
+		1ADFCB4D204773FD00FAC3C8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1ADFCB4E2047740D00FAC3C8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFCB4F204774FE00FAC3C8 /* HttpService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1EE8BE1592A2298717191D3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6858E3DF7A671EF4E1DBDEAC /* Pods-AirCondition.debug.xcconfig */,
+				CC0B2C5A05C5D9901F33CF24 /* Pods-AirCondition.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D571F7209ABDCA9FFF49988 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE84F48E0D790A45A216CED4 /* Pods_AirCondition.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9480DAD2047F6C400387E81 /* HSModels */ = {
+			isa = PBXGroup;
+			children = (
+				1A0A952620478323007561F8 /* HSStation.swift */,
+				1A0A952820478553007561F8 /* HSCity.swift */,
+				1A0A952A2047864D007561F8 /* HSCommune.swift */,
+				F99332292048131100CC8871 /* HSStationDetails.swift */,
+				F993322B204814DF00CC8871 /* HSStationParameters.swift */,
+				F9EDBA4E20481B0A00B398C1 /* HSSensorsData.swift */,
+				F9EDBA5020481B1A00B398C1 /* HSSensorsDataValue.swift */,
+				F9EDBA4C20481AB900B398C1 /* HSAirConditionIndex.swift */,
+			);
+			path = HSModels;
+			sourceTree = "<group>";
+		};
+		F98E2690204837BA0094C980 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				F98E2691204837E20094C980 /* StationListCell.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		F98E269320483AAB0094C980 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F98E269420483ABD0094C980 /* Observer.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F98E2698204840A50094C980 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F98E2699204840B50094C980 /* Station.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9EDBA5220481EC100B398C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9CDF642204825EA007CDB00 /* StationListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F9EDBA5420481EDA00B398C1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F98E269620483C960094C980 /* StationListCellViewModel.swift */,
+				F9CDF6402048256C007CDB00 /* StationListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1ADFCB1B2047713C00FAC3C8 /* AirCondition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ADFCB442047713C00FAC3C8 /* Build configuration list for PBXNativeTarget "AirCondition" */;
+			buildPhases = (
+				C476D1947F6EEA7F090A0674 /* [CP] Check Pods Manifest.lock */,
+				1ADFCB182047713C00FAC3C8 /* Sources */,
+				1ADFCB192047713C00FAC3C8 /* Frameworks */,
+				1ADFCB1A2047713C00FAC3C8 /* Resources */,
+				1ADFCB512047776C00FAC3C8 /* ShellScript */,
+				3753261681E8298D5EC55412 /* [CP] Embed Pods Frameworks */,
+				8976A20907D0179D231C1519 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirCondition;
+			productName = AirCondition;
+			productReference = 1ADFCB1C2047713C00FAC3C8 /* AirCondition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1ADFCB2F2047713C00FAC3C8 /* AirConditionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ADFCB472047713C00FAC3C8 /* Build configuration list for PBXNativeTarget "AirConditionTests" */;
+			buildPhases = (
+				1ADFCB2C2047713C00FAC3C8 /* Sources */,
+				1ADFCB2D2047713C00FAC3C8 /* Frameworks */,
+				1ADFCB2E2047713C00FAC3C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ADFCB322047713C00FAC3C8 /* PBXTargetDependency */,
+			);
+			name = AirConditionTests;
+			productName = AirConditionTests;
+			productReference = 1ADFCB302047713C00FAC3C8 /* AirConditionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1ADFCB3A2047713C00FAC3C8 /* AirConditionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ADFCB4A2047713C00FAC3C8 /* Build configuration list for PBXNativeTarget "AirConditionUITests" */;
+			buildPhases = (
+				1ADFCB372047713C00FAC3C8 /* Sources */,
+				1ADFCB382047713C00FAC3C8 /* Frameworks */,
+				1ADFCB392047713C00FAC3C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ADFCB3D2047713C00FAC3C8 /* PBXTargetDependency */,
+			);
+			name = AirConditionUITests;
+			productName = AirConditionUITests;
+			productReference = 1ADFCB3B2047713C00FAC3C8 /* AirConditionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ADFCB142047713C00FAC3C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Yuriy Paterega";
+				TargetAttributes = {
+					1ADFCB1B2047713C00FAC3C8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					1ADFCB2F2047713C00FAC3C8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1ADFCB1B2047713C00FAC3C8;
+					};
+					1ADFCB3A2047713C00FAC3C8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1ADFCB1B2047713C00FAC3C8;
+					};
+				};
+			};
+			buildConfigurationList = 1ADFCB172047713C00FAC3C8 /* Build configuration list for PBXProject "AirCondition" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ADFCB132047713C00FAC3C8;
+			productRefGroup = 1ADFCB1D2047713C00FAC3C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ADFCB1B2047713C00FAC3C8 /* AirCondition */,
+				1ADFCB2F2047713C00FAC3C8 /* AirConditionTests */,
+				1ADFCB3A2047713C00FAC3C8 /* AirConditionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1ADFCB1A2047713C00FAC3C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADFCB2A2047713C00FAC3C8 /* LaunchScreen.storyboard in Resources */,
+				1ADFCB272047713C00FAC3C8 /* Assets.xcassets in Resources */,
+				1ADFCB252047713C00FAC3C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADFCB2E2047713C00FAC3C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADFCB392047713C00FAC3C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ADFCB512047776C00FAC3C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		3753261681E8298D5EC55412 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AirCondition/Pods-AirCondition-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirCondition/Pods-AirCondition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8976A20907D0179D231C1519 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirCondition/Pods-AirCondition-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C476D1947F6EEA7F090A0674 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirCondition-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ADFCB182047713C00FAC3C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9EDBA5120481B1A00B398C1 /* HSSensorsDataValue.swift in Sources */,
+				F993322A2048131100CC8871 /* HSStationDetails.swift in Sources */,
+				1A0A952B2047864D007561F8 /* HSCommune.swift in Sources */,
+				1ADFCB202047713C00FAC3C8 /* AppDelegate.swift in Sources */,
+				1ADFCB50204774FE00FAC3C8 /* HttpService.swift in Sources */,
+				F98E269520483ABD0094C980 /* Observer.swift in Sources */,
+				F993322C204814DF00CC8871 /* HSStationParameters.swift in Sources */,
+				F9EDBA4F20481B0A00B398C1 /* HSSensorsData.swift in Sources */,
+				1A0A952720478323007561F8 /* HSStation.swift in Sources */,
+				F98E2692204837E20094C980 /* StationListCell.swift in Sources */,
+				F98E269A204840B50094C980 /* Station.swift in Sources */,
+				F9CDF643204825EA007CDB00 /* StationListViewController.swift in Sources */,
+				1A0A952920478553007561F8 /* HSCity.swift in Sources */,
+				F98E269720483C960094C980 /* StationListCellViewModel.swift in Sources */,
+				F9EDBA4D20481AB900B398C1 /* HSAirConditionIndex.swift in Sources */,
+				F9CDF6412048256C007CDB00 /* StationListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADFCB2C2047713C00FAC3C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADFCB352047713C00FAC3C8 /* AirConditionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADFCB372047713C00FAC3C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADFCB402047713C00FAC3C8 /* AirConditionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1ADFCB322047713C00FAC3C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ADFCB1B2047713C00FAC3C8 /* AirCondition */;
+			targetProxy = 1ADFCB312047713C00FAC3C8 /* PBXContainerItemProxy */;
+		};
+		1ADFCB3D2047713C00FAC3C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ADFCB1B2047713C00FAC3C8 /* AirCondition */;
+			targetProxy = 1ADFCB3C2047713C00FAC3C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1ADFCB232047713C00FAC3C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ADFCB242047713C00FAC3C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1ADFCB282047713C00FAC3C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ADFCB292047713C00FAC3C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1ADFCB422047713C00FAC3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1ADFCB432047713C00FAC3C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1ADFCB452047713C00FAC3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6858E3DF7A671EF4E1DBDEAC /* Pods-AirCondition.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirCondition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirCondition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1ADFCB462047713C00FAC3C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0B2C5A05C5D9901F33CF24 /* Pods-AirCondition.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirCondition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirCondition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1ADFCB482047713C00FAC3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirConditionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirConditionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirCondition.app/AirCondition";
+			};
+			name = Debug;
+		};
+		1ADFCB492047713C00FAC3C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirConditionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirConditionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirCondition.app/AirCondition";
+			};
+			name = Release;
+		};
+		1ADFCB4B2047713C00FAC3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirConditionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirConditionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AirCondition;
+			};
+			name = Debug;
+		};
+		1ADFCB4C2047713C00FAC3C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirConditionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirConditionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AirCondition;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ADFCB172047713C00FAC3C8 /* Build configuration list for PBXProject "AirCondition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADFCB422047713C00FAC3C8 /* Debug */,
+				1ADFCB432047713C00FAC3C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ADFCB442047713C00FAC3C8 /* Build configuration list for PBXNativeTarget "AirCondition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADFCB452047713C00FAC3C8 /* Debug */,
+				1ADFCB462047713C00FAC3C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ADFCB472047713C00FAC3C8 /* Build configuration list for PBXNativeTarget "AirConditionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADFCB482047713C00FAC3C8 /* Debug */,
+				1ADFCB492047713C00FAC3C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ADFCB4A2047713C00FAC3C8 /* Build configuration list for PBXNativeTarget "AirConditionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADFCB4B2047713C00FAC3C8 /* Debug */,
+				1ADFCB4C2047713C00FAC3C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1ADFCB142047713C00FAC3C8 /* Project object */;
+}
