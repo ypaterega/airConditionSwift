@@ -83,6 +83,7 @@
                                     <outlet property="longitudeLabel" destination="dFn-se-QpB" id="EHv-ZR-xgX"/>
                                     <outlet property="stationImage" destination="6c5-4B-PkJ" id="Drh-M0-xaw"/>
                                     <outlet property="stationNameLabel" destination="OY5-rO-AqW" id="DpX-O6-bSL"/>
+                                    <segue destination="Hhp-ZM-Z3m" kind="presentation" id="YOO-Bo-bTV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -112,6 +113,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ov-0P-8jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1524" y="69"/>
+        </scene>
+        <!--Station Air Params View Controller-->
+        <scene sceneID="cPU-HC-0PM">
+            <objects>
+                <tableViewController id="Hhp-ZM-Z3m" customClass="StationAirParamsViewController" customModule="AirCondition" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EVa-E9-hWj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="40" id="G85-zH-Dzn" customClass="StationAirParamsCell" customModule="AirCondition" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G85-zH-Dzn" id="96X-cE-5Xf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiN-kq-zCN">
+                                            <rect key="frame" x="10" y="9" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egT-sp-SGp">
+                                            <rect key="frame" x="323" y="9" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="egT-sp-SGp" firstAttribute="centerY" secondItem="96X-cE-5Xf" secondAttribute="centerY" id="Dqv-77-Ja6"/>
+                                        <constraint firstItem="oiN-kq-zCN" firstAttribute="leading" secondItem="96X-cE-5Xf" secondAttribute="leading" constant="10" id="Jue-Gl-2HH"/>
+                                        <constraint firstAttribute="trailing" secondItem="egT-sp-SGp" secondAttribute="trailing" constant="10" id="guQ-yO-Vfh"/>
+                                        <constraint firstItem="egT-sp-SGp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="oiN-kq-zCN" secondAttribute="trailing" constant="271" id="i7H-yt-GNA"/>
+                                        <constraint firstItem="oiN-kq-zCN" firstAttribute="centerY" secondItem="96X-cE-5Xf" secondAttribute="centerY" id="w4m-kO-oCs"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="title" destination="oiN-kq-zCN" id="QjM-IR-ORs"/>
+                                    <outlet property="value" destination="egT-sp-SGp" id="R6c-1j-Hz5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hhp-ZM-Z3m" id="M2M-Ym-ZNp"/>
+                            <outlet property="delegate" destination="Hhp-ZM-Z3m" id="dEv-6g-Cvo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKL-4F-ukJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="69"/>
         </scene>
     </scenes>
 </document>

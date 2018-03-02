@@ -27,10 +27,11 @@ class StationListViewModel {
     
     private func setCellsData(from apiModel: [HSStation]) {
         stationListCells.value = apiModel.map { model in
-            Station(stationName: model.stationName,
+            Station(id: model.id,
+                    stationName: model.stationName,
                     gegrLat: model.gegrLat,
                     gegrLon: model.gegrLon,
-                    city: model.city?.commune?.communeName,
+                    city: model.city?.name,
                     addressStreet: model.addressStreet)
         }
     }

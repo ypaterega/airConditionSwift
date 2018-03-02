@@ -9,6 +9,7 @@
 import Foundation
 
 struct Station {
+    var id: Int?
     var stationName: String?
     var gegrLat: String?
     var gegrLon: String?

@@ -44,7 +44,7 @@ class HSAirConditionIndex: Mappable {
     func mapping(map: Map) {        
         id <- map["id"]
         stCalcDate <- map["stCalcDate"]
-        stSourceDataDate <- map["stSourceDataDate"]
+        stIndexLevel <- map["stIndexLevel"]
         stSourceDataDate <- map["stSourceDataDate"]
         so2CalcDate <- map["so2CalcDate"]
         so2IndexLevel <- map["so2IndexLevel"]
