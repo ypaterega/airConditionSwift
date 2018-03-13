@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ch0-L2-g1h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Station list-->
         <scene sceneID="00g-Sh-97Z">
             <objects>
-                <tableViewController id="0P0-hM-oqS" customClass="StationListViewController" customModule="AirCondition" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StationList" id="0P0-hM-oqS" customClass="StationListViewController" customModule="AirCondition" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hng-oQ-Whd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,6 @@
                                     <outlet property="longitudeLabel" destination="dFn-se-QpB" id="EHv-ZR-xgX"/>
                                     <outlet property="stationImage" destination="6c5-4B-PkJ" id="Drh-M0-xaw"/>
                                     <outlet property="stationNameLabel" destination="OY5-rO-AqW" id="DpX-O6-bSL"/>
-                                    <segue destination="Hhp-ZM-Z3m" kind="presentation" id="YOO-Bo-bTV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -98,26 +97,10 @@
             </objects>
             <point key="canvasLocation" x="-356" y="69"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="k2A-cO-dPo">
-            <objects>
-                <navigationController id="Ch0-L2-g1h" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Fu-3M-vdY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="0P0-hM-oqS" kind="relationship" relationship="rootViewController" id="IBZ-h8-jAj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3ov-0P-8jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1524" y="69"/>
-        </scene>
         <!--Station Air Params View Controller-->
         <scene sceneID="cPU-HC-0PM">
             <objects>
-                <tableViewController id="Hhp-ZM-Z3m" customClass="StationAirParamsViewController" customModule="AirCondition" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StationAirParams" id="Hhp-ZM-Z3m" customClass="StationAirParamsViewController" customModule="AirCondition" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EVa-E9-hWj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -12,6 +12,8 @@ class StationListViewModel {
     
     let showLoading: Observer = Observer(false)
     
+    weak var coordinatorDelegate: StationListCoordinatorDelegate?
+    
     let stationListCells = Observer([StationListCellViewModel]())
     let httpService: HttpService
     
