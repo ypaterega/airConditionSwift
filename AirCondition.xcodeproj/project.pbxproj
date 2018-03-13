@@ -137,6 +137,100 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1A3FA20D2057511C00D1F963 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1A3FA2102057515100D1F963 /* Details */,
+				1A3FA20F2057514000D1F963 /* StationList */,
+				1A3FA20E2057512C00D1F963 /* Map */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1A3FA20E2057512C00D1F963 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		1A3FA20F2057514000D1F963 /* StationList */ = {
+			isa = PBXGroup;
+			children = (
+				1A3FA2122057518800D1F963 /* viewModel */,
+				1A3FA2112057518400D1F963 /* view */,
+			);
+			path = StationList;
+			sourceTree = "<group>";
+		};
+		1A3FA2102057515100D1F963 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				1A3FA2142057528400D1F963 /* viewModel */,
+				1A3FA2132057528000D1F963 /* view */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		1A3FA2112057518400D1F963 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F9CDF642204825EA007CDB00 /* StationListViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1A3FA2122057518800D1F963 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9CDF6402048256C007CDB00 /* StationListViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		1A3FA2132057528000D1F963 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1A31F1962048D23500C8EDBA /* StationAirParamsViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1A3FA2142057528400D1F963 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A31F1982048D25E00C8EDBA /* StationAirParamsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		1A3FA215205753A400D1F963 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1A3FA217205753E900D1F963 /* StationAirParamsCell */,
+				1A3FA216205753AB00D1F963 /* StationListCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1A3FA216205753AB00D1F963 /* StationListCell */ = {
+			isa = PBXGroup;
+			children = (
+				F98E269620483C960094C980 /* StationListCellViewModel.swift */,
+				F98E2691204837E20094C980 /* StationListCell.swift */,
+			);
+			path = StationListCell;
+			sourceTree = "<group>";
+		};
+		1A3FA217205753E900D1F963 /* StationAirParamsCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A31F1902048CD5000C8EDBA /* StationAirParamsCell.swift */,
+				1A31F1922048CDA400C8EDBA /* StationAirParamsCellViewModel.swift */,
+			);
+			path = StationAirParamsCell;
+			sourceTree = "<group>";
+		};
 		1ADFCB132047713C00FAC3C8 = {
 			isa = PBXGroup;
 			children = (
@@ -163,12 +257,10 @@
 			isa = PBXGroup;
 			children = (
 				1A31F18D2048BB2600C8EDBA /* Resources */,
+				1A3FA20D2057511C00D1F963 /* Screens */,
 				F98E2698204840A50094C980 /* Model */,
 				F98E269320483AAB0094C980 /* Common */,
 				F98E2690204837BA0094C980 /* Controls */,
-				F9EDBA5420481EDA00B398C1 /* ViewModels */,
-				F9EDBA5220481EC100B398C1 /* ViewControllers */,
-				1A0A952520478198007561F8 /* NetworkingModel */,
 				1ADFCB4E2047740D00FAC3C8 /* Networking */,
 				1ADFCB4D204773FD00FAC3C8 /* App */,
 				1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */,
@@ -208,6 +300,7 @@
 		1ADFCB4E2047740D00FAC3C8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1A0A952520478198007561F8 /* NetworkingModel */,
 				1ADFCB4F204774FE00FAC3C8 /* HttpService.swift */,
 			);
 			path = Networking;
@@ -249,8 +342,7 @@
 		F98E2690204837BA0094C980 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				F98E2691204837E20094C980 /* StationListCell.swift */,
-				1A31F1902048CD5000C8EDBA /* StationAirParamsCell.swift */,
+				1A3FA215205753A400D1F963 /* Cells */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -270,26 +362,6 @@
 				1A31F1942048D0CD00C8EDBA /* StationAirParams.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F9EDBA5220481EC100B398C1 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				F9CDF642204825EA007CDB00 /* StationListViewController.swift */,
-				1A31F1962048D23500C8EDBA /* StationAirParamsViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F9EDBA5420481EDA00B398C1 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				1A31F1922048CDA400C8EDBA /* StationAirParamsCellViewModel.swift */,
-				F98E269620483C960094C980 /* StationListCellViewModel.swift */,
-				F9CDF6402048256C007CDB00 /* StationListViewModel.swift */,
-				1A31F1982048D25E00C8EDBA /* StationAirParamsViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

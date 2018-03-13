@@ -24,6 +24,30 @@ class StationListCell: UITableViewCell {
         }
     }
     
+    /*
+     
+     func setName(_ name: String) {
+     nameLabel.text = name
+     }
+     
+     func setDescription(_ description: String) {
+     descriptionLabel.text = description
+     }
+     
+     func setStarsCountTest(_ starsText: String) {
+     starsLabel.text = starsText
+     }
+     
+     func setSize(_ sizeText: String) {
+     sizeLabel.text = sizeText
+     }
+     
+     func setWatchers(_ watchersText: String) {
+     watchersLabel.text = watchersText
+     }
+     
+    */
+    
     func setCellViewModel() {
     
         stationImage.image = UIImage(named: "ic_place")
