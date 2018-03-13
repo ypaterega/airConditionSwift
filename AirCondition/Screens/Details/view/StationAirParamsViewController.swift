@@ -43,7 +43,7 @@ extension StationAirParamsViewController {
             return UITableViewCell()
         }
         
-        cell.viewModel = viewModel.stationAirParamsListCells.value[indexPath.row] as! StationAirParamsCellViewModel
+     //   cell.viewModel = viewModel.stationAirParamsListCells.value[indexPath.row] as! StationAirParamsCellViewModel
         return cell
     }
 }

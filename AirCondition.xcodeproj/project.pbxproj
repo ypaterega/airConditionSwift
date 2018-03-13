@@ -17,6 +17,8 @@
 		1A31F1952048D0CD00C8EDBA /* StationAirParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31F1942048D0CD00C8EDBA /* StationAirParams.swift */; };
 		1A31F1972048D23500C8EDBA /* StationAirParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31F1962048D23500C8EDBA /* StationAirParamsViewController.swift */; };
 		1A31F1992048D25E00C8EDBA /* StationAirParamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31F1982048D25E00C8EDBA /* StationAirParamsViewModel.swift */; };
+		1A3FA21B205770E900D1F963 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA21A205770E900D1F963 /* APIRouter.swift */; };
+		1A3FA21D2057749700D1F963 /* APIRouterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA21C2057749700D1F963 /* APIRouterConstants.swift */; };
 		1ADFCB202047713C00FAC3C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */; };
 		1ADFCB252047713C00FAC3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB232047713C00FAC3C8 /* Main.storyboard */; };
 		1ADFCB272047713C00FAC3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB262047713C00FAC3C8 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		1A31F1942048D0CD00C8EDBA /* StationAirParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAirParams.swift; sourceTree = "<group>"; };
 		1A31F1962048D23500C8EDBA /* StationAirParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAirParamsViewController.swift; sourceTree = "<group>"; };
 		1A31F1982048D25E00C8EDBA /* StationAirParamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAirParamsViewModel.swift; sourceTree = "<group>"; };
+		1A3FA21A205770E900D1F963 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		1A3FA21C2057749700D1F963 /* APIRouterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterConstants.swift; sourceTree = "<group>"; };
 		1ADFCB1C2047713C00FAC3C8 /* AirCondition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirCondition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ADFCB242047713C00FAC3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -302,6 +306,8 @@
 			children = (
 				1A0A952520478198007561F8 /* NetworkingModel */,
 				1ADFCB4F204774FE00FAC3C8 /* HttpService.swift */,
+				1A3FA21A205770E900D1F963 /* APIRouter.swift */,
+				1A3FA21C2057749700D1F963 /* APIRouterConstants.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -595,7 +601,9 @@
 				F98E269720483C960094C980 /* StationListCellViewModel.swift in Sources */,
 				1A31F1972048D23500C8EDBA /* StationAirParamsViewController.swift in Sources */,
 				F9EDBA4D20481AB900B398C1 /* HSAirConditionIndex.swift in Sources */,
+				1A3FA21B205770E900D1F963 /* APIRouter.swift in Sources */,
 				F9CDF6412048256C007CDB00 /* StationListViewModel.swift in Sources */,
+				1A3FA21D2057749700D1F963 /* APIRouterConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

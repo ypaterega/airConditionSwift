@@ -20,9 +20,7 @@ class StationAirParamsViewModel {
     }
     
     func onLoad() {
-        httpService.getSensorsData(stationId: "52", completion: { [weak self] result in //temp
-            self?.setCellsData(from: result)
-        })
+     
     }
     
     private func setCellsData(from apiModel: HSAirConditionIndex) {

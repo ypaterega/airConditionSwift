@@ -16,12 +16,6 @@ enum ServiceError: Error {
 
 class HttpService {
     
-    fileprivate let mainAdressUrl: String = "http://api.gios.gov.pl/pjp-api/rest/"
-    fileprivate let allStationUrl: String = "station/findAll"
-    fileprivate let sensorsStationUrl: String = "station/sensors/"
-    fileprivate let measuringSensorsUrl: String = "data/getData/"
-    fileprivate let airConditionStationUrl: String = "aqindex/getIndex/"
-    
     private let session: URLSession
     
     init(session: URLSession = URLSession.shared) {
@@ -30,38 +24,50 @@ class HttpService {
     
     typealias GetStationsCompletion = (_ result: [HSStation]) -> Void
     typealias GetStationDetailsCompletion = (_ result: [HSStationDetails]) -> Void
+    typealias GetStationSensorsDetailsCompletion = (_ result: HSSensorsData) -> Void
     typealias GetAirConditionCompletion = (_ result: HSAirConditionIndex) -> Void
     
     func getStations(completion: @escaping GetStationsCompletion) {
         
-        let allStationsUrl = mainAdressUrl + allStationUrl
-    
-        Alamofire.request(allStationsUrl, method: .get).responseArray { (response : DataResponse <[HSStation]>) in
+        Alamofire.request(APIRouter.getStations()).responseArray { (response : DataResponse <[HSStation]>) in
             if let jsonArray = response.value {
                 completion(jsonArray)
             }
         }
     }
     
-    func getSensorsData(stationId: String , completion: @escaping GetStationDetailsCompletion) {
+    func getStationSensorsData(stationId: String, completion: @escaping GetStationDetailsCompletion) {
         
-        let stationDetailsUrl = mainAdressUrl + sensorsStationUrl + stationId
-        
-        Alamofire.request(stationDetailsUrl, method: .get).responseArray { (response : DataResponse <[HSStationDetails]>) in
+       Alamofire.request(APIRouter.getStationSensorsData(stationId: stationId)).responseArray { (response : DataResponse <[HSStationDetails]>) in
             if let jsonArray = response.value {
                 completion(jsonArray)
             }
         }
     }
     
-    func getSensorsData(stationId: String , completion: @escaping GetAirConditionCompletion) {
-        
-        let airConditionUrl = mainAdressUrl + airConditionStationUrl + stationId
-        
-        Alamofire.request(airConditionUrl, method: .get).responseObject { (response : DataResponse <HSAirConditionIndex>) in
+    func getSensorsData(sensorId: String , completion: @escaping GetStationSensorsDetailsCompletion) {
+    
+        Alamofire.request(APIRouter.getSensorsData(sensorId: sensorId)).responseObject { (response : DataResponse <HSSensorsData>) in
             if let jsonArray = response.value {
                 completion(jsonArray)
             }
         }
     }
+    
+    func getIndex(stationId: String , completion: @escaping GetAirConditionCompletion) {
+        
+        Alamofire.request(APIRouter.getIndex(stationId: stationId)).responseObject { (response : DataResponse <HSAirConditionIndex>) in
+            if let jsonArray = response.value {
+                completion(jsonArray)
+            }
+        }
+    }
+    
+    //TODO
+    /*func request<T: BaseMappable>(url: String, method: HTTPMethod, completion: @escaping Get<[T]>) {
+        Alamofire.request(url, method: method).responseArray { (response: DataResponse<[T]>) in
+            guard let array = response.value else { return }
+            completion(response.value)
+        }
+    }*/
 }
