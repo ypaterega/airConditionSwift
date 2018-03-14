@@ -27,14 +27,13 @@ class MapViewCoordinator: Coordinator {
         if let vc = storyboard.instantiateViewController(withIdentifier: "MapView") as? MapViewController {
             let viewModel =  MapViewModel()
             viewModel.coordinatorDelegate = self
-            //vc.viewModel = viewModel
+            vc.viewModel = viewModel
             window.rootViewController = vc
         }
     }
 }
 
 extension MapViewCoordinator: MapViewModelCoordinatorDelegate {
- 
     func mapViewModelDidLogin(viewModel: MapViewModelProtocol) {
         delegate?.mapCoordinatorDidFinish(mapCoordinator: self)
     }

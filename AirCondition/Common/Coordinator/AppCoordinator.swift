@@ -22,13 +22,13 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-       showStationList()
+       showMapStationList()
     }
 }
 
 extension AppCoordinator: MapViewCoordinatorDelegate {
 
-    func showStationList() {
+    func showMapStationList() {
         let mapCoordinator = MapViewCoordinator(window: window)
         coordinators[MAP_VIEW_KEY] = mapCoordinator
         mapCoordinator.delegate = self
@@ -37,7 +37,7 @@ extension AppCoordinator: MapViewCoordinatorDelegate {
     
     func mapCoordinatorDidFinish(mapCoordinator: MapViewCoordinator) {
         coordinators[MAP_VIEW_KEY] = nil
-        showStationList()
+        showList()
     }
 }
 

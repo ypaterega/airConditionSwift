@@ -8,15 +8,11 @@
 
 import Foundation
 
-protocol StationListViewModelViewDelegate: class {
-  
-}
-/*
 protocol StationListViewModelCoordinatorDelegate: class {
-    func stationListViewModelDidSelectData(_ viewModel: StationListModelProtocol)
+     func stationListViewModelDidSelectData(_ viewModel: StationListModelProtocol, data: String)
 }
 
 protocol StationListModelProtocol {
     var coordinatorDelegate: StationListViewModelCoordinatorDelegate? { get set}
 }
-*/
+

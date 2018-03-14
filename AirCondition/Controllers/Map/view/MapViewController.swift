@@ -16,7 +16,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    let viewModel: MapViewModel = MapViewModel()
+    var viewModel: MapViewModel = MapViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

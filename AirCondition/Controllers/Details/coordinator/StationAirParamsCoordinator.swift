@@ -7,27 +7,28 @@
 //
 
 import UIKit
-/*
+
 protocol StationAirParamslCoordinatorDelegate: class {
-   //func stationAirParamslCoordinatorDidFinish(stationAirParamslCoordinator: stationAirParamslCoordinator)
+   func stationAirParamsCoordinatorDidFinish(stationAirParamsCoordinator: StationAirParamslCoordinator)
 }
 
 class StationAirParamslCoordinator: Coordinator {
     
     weak var delegate: StationAirParamslCoordinatorDelegate?
-    let dataItem: DataItem
+    
+    let dataItem: String
     var window: UIWindow
     
-    init(window: UIWindow, dataItem: DataItem) {
+    init(window: UIWindow, dataItem: String) {
         self.window = window
         self.dataItem = dataItem
     }
     
     func start() {
-        let storyboard = UIStoryboard(name: "MVVM-C", bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier: "StationAirParamsl") as? StationAirParamslViewController {
-            let viewModel = StationAirParamslViewModel()
-            viewModel.model = StationAirParamslModel(stationAirParamslItem: dataItem)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "StationAirParams") as? StationAirParamsViewController {
+            let viewModel = StationAirParamsViewModel()
+           // viewModel.model = StationAirParamsModel(stationAirParamslItem: dataItem)
             viewModel.coordinatorDelegate = self
             vc.viewModel = viewModel
             window.rootViewController = vc
@@ -35,10 +36,9 @@ class StationAirParamslCoordinator: Coordinator {
     }
 }
 
-extension StationAirParamslCoordinator: StationAirParamslViewModelCoordinatorDelegate {
-    
-    func stationAirParamslViewModelDidEnd(_ viewModel: StationAirParamslViewModel) {
-        delegate?.stationAirParamslCoordinatorDidFinish(stationAirParamslCoordinator: self)
+extension StationAirParamslCoordinator: StationAirParamsViewModelCoordinatorDelegate {
+    func stationAirParamsViewModelDidEnd(_ viewModel: StationAirParamsViewModelProtocol) {
+        delegate?.stationAirParamsCoordinatorDidFinish(stationAirParamsCoordinator: self)
     }
 }
-*/
+

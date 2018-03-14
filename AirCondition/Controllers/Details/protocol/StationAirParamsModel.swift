@@ -7,23 +7,12 @@
 //
 
 import Foundation
-/*
-protocol StationAirParamsViewModelViewDelegate: class
-{
-    func stationAirParamsDidChange(viewModel: stationAirParamsViewModel)
+
+protocol StationAirParamsViewModelCoordinatorDelegate: class {
+    func stationAirParamsViewModelDidEnd(_ viewModel: StationAirParamsViewModelProtocol)
 }
 
-
-protocol StationAirParamsViewModelCoordinatorDelegate: class
-{
-    func stationAirParamsViewModelDidEnd(_ viewModel: stationAirParamsViewModel)
-}
-
-protocol StationAirParamsViewModelProtocol
-{
-    var model: StationAirParamsModel? { get set }
-    var viewDelegate: StationAirParamsViewModelViewDelegate? { get set }
+protocol StationAirParamsViewModelProtocol {
     var coordinatorDelegate: StationAirParamsViewModelCoordinatorDelegate? { get set}
-    var stationAirParams: DataItem? { get }
-}*/
-
+    var stationAirParams: String? { get }
+}

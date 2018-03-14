@@ -11,7 +11,7 @@ import Foundation
 class StationAirParamsViewModel {
     
     let showLoading: Observer = Observer(false)
-    //weak var coordinatorDelegate: StationAirParamsCoordinator?
+    weak var coordinatorDelegate: StationAirParamsViewModelCoordinatorDelegate?
     
     let stationAirParamsListCells = Observer([StationAirParamsCell]())
     let httpService: HttpService

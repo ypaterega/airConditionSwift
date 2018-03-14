@@ -20,7 +20,8 @@ class StationListCoordinator: Coordinator {
     }
     
     weak var delegate: StationListCoordinatorDelegate?
-    //var detailCoordinator: DetailCoordinator?
+    var detailCoordinator: StationAirParamslCoordinator?
+    
     var window: UIWindow
     var stationListViewController: StationListViewController?
     
@@ -31,28 +32,25 @@ class StationListCoordinator: Coordinator {
         guard let stationListViewController = stationListViewController else { return }
         
         let viewModel =  StationListViewModel()
-        //viewModel.model = StationListModel()
-        viewModel.coordinatorDelegate = self as! StationListCoordinatorDelegate
-       // stationListViewController.viewModel = viewModel
+        viewModel.coordinatorDelegate = self
+        stationListViewController.viewModel = viewModel
         window.rootViewController = stationListViewController
     }
 }
 
-/*
-extension ListCoordinator: StationListViewModelCoordinatorDelegate {
-    func listViewModelDidSelectData(_ viewModel: ListViewModel, data: DataItem) {
-     //   detailCoordinator = DetailCoordinator(window: window, dataItem: data)
-     //   detailCoordinator?.delegate = self
-     //   detailCoordinator?.start()
+extension StationListCoordinator: StationListViewModelCoordinatorDelegate {
+    func stationListViewModelDidSelectData(_ viewModel: StationListModelProtocol,
+                                           data: String) {
+        detailCoordinator = StationAirParamslCoordinator(window: window,
+                                                         dataItem: data)
+        detailCoordinator?.delegate = self
+        detailCoordinator?.start()
     }
 }
 
-
-extension ListCoordinator: DetailCoordinatorDelegate {
-    func detailCoordinatorDidFinish(detailCoordinator: DetailCoordinator)
-    {
+extension StationListCoordinator: StationAirParamslCoordinatorDelegate {
+    func stationAirParamsCoordinatorDidFinish(stationAirParamsCoordinator: StationAirParamslCoordinator) {
         self.detailCoordinator = nil
-        window.rootViewController = listViewController
+        window.rootViewController = stationListViewController
     }
 }
-*/

@@ -11,7 +11,7 @@ import UIKit
 
 class StationAirParamsViewController: UITableViewController {
     
-    let viewModel: StationAirParamsViewModel = StationAirParamsViewModel()
+    var viewModel: StationAirParamsViewModel = StationAirParamsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,7 +12,7 @@ class StationListViewModel {
     
     let showLoading: Observer = Observer(false)
     
-    weak var coordinatorDelegate: StationListCoordinatorDelegate?
+    weak var coordinatorDelegate: StationListViewModelCoordinatorDelegate?
     
     let stationListCells = Observer([StationListCellViewModel]())
     let httpService: HttpService
@@ -37,8 +37,4 @@ class StationListViewModel {
                     addressStreet: model.addressStreet)
         }
     }
-}
-
-protocol StationListViewModelCoordinatorDelegate: class {
-   func stationAirParamsViewModel(viewModel: StationAirParamsViewModel) 
 }

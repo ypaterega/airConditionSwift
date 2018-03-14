@@ -11,7 +11,7 @@ import UIKit
 
 class StationListViewController: UITableViewController {
     
-    let viewModel: StationListViewModel = StationListViewModel()
+    var viewModel: StationListViewModel = StationListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
