@@ -31,10 +31,10 @@ class MapViewController: UIViewController {
     private func setupNavBar(){
         let screenSize: CGRect = UIScreen.main.bounds
         let navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: screenSize.width, height: 60))
-        let navItem = UINavigationItem(title: "Map")
+        let navItem = UINavigationItem(title: "Stations map")
         let item = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.bookmarks,
                                        target: nil,
-                                       action: #selector(done))
+                                       action: #selector(openStationList))
         navItem.rightBarButtonItem = item
         
         navBar.setItems([navItem], animated: false)
@@ -42,8 +42,8 @@ class MapViewController: UIViewController {
         self.view.addSubview(navBar)
     }
     
-    @objc func done() { // remove @objc for Swift 3
-        
+    @objc func openStationList() {
+        viewModel.openStationList()
     }
     
     private func bindViewModel() {

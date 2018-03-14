@@ -6,6 +6,9 @@
 //  Copyright © 2018 Yuriy Paterega. All rights reserved.
 //
 
+// NOT FINISHED. Generics
+
+
 import Foundation
 import Alamofire
 import AlamofireObjectMapper

@@ -34,4 +34,8 @@ class MapViewModel: NSObject, MKMapViewDelegate {
                         lattitude: model.gegrLat!)
         }
     }
+    
+    func openStationList() {
+         self.coordinatorDelegate?.mapViewModelDidLogin(viewModel: self)
+    }
 }
