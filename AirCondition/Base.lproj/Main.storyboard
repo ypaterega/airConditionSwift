@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m8I-fz-3oi">
-                                <rect key="frame" x="16" y="68" width="343" height="579"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bx7-eL-yMz" firstAttribute="trailing" secondItem="m8I-fz-3oi" secondAttribute="trailing" constant="16" id="51V-FZ-93b"/>
-                            <constraint firstItem="m8I-fz-3oi" firstAttribute="leading" secondItem="bx7-eL-yMz" secondAttribute="leading" constant="16" id="Rde-zh-9i1"/>
-                            <constraint firstItem="m8I-fz-3oi" firstAttribute="top" secondItem="bx7-eL-yMz" secondAttribute="top" constant="48" id="UKp-Oi-bSt"/>
-                            <constraint firstItem="bx7-eL-yMz" firstAttribute="bottom" secondItem="m8I-fz-3oi" secondAttribute="bottom" constant="20" id="y6t-Fx-xLu"/>
+                            <constraint firstItem="bx7-eL-yMz" firstAttribute="trailing" secondItem="m8I-fz-3oi" secondAttribute="trailing" id="51V-FZ-93b"/>
+                            <constraint firstItem="m8I-fz-3oi" firstAttribute="leading" secondItem="bx7-eL-yMz" secondAttribute="leading" id="Rde-zh-9i1"/>
+                            <constraint firstItem="m8I-fz-3oi" firstAttribute="top" secondItem="bx7-eL-yMz" secondAttribute="top" constant="40" id="UKp-Oi-bSt"/>
+                            <constraint firstItem="bx7-eL-yMz" firstAttribute="bottom" secondItem="m8I-fz-3oi" secondAttribute="bottom" id="y6t-Fx-xLu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bx7-eL-yMz"/>
                     </view>
