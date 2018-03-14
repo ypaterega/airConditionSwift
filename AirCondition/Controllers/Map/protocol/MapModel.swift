@@ -1,5 +1,5 @@
 //
-//  MapViewModel.swift
+//  MapModel.swift
 //  AirCondition
 //
 //  Created by Yuriy Paterega on 14.03.18.
@@ -8,15 +8,10 @@
 
 import Foundation
 
-protocol MapViewViewModelViewDelegate: class {
-
-}
-
 protocol MapViewModelCoordinatorDelegate: class {
-    func mapViewModelDidLogin(viewModel: MapViewModel)
+    func mapViewModelDidLogin(viewModel: MapViewModelProtocol)
 }
 
-protocol MapModel {
-    var viewDelegate: MapViewViewModelViewDelegate? { get set }
+protocol MapViewModelProtocol {
     var coordinatorDelegate: MapViewModelCoordinatorDelegate? { get set}
 }

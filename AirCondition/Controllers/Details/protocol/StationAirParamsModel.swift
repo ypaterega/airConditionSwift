@@ -19,7 +19,7 @@ protocol StationAirParamsViewModelCoordinatorDelegate: class
     func stationAirParamsViewModelDidEnd(_ viewModel: stationAirParamsViewModel)
 }
 
-protocol StationAirParamsViewModel
+protocol StationAirParamsViewModelProtocol
 {
     var model: StationAirParamsModel? { get set }
     var viewDelegate: StationAirParamsViewModelViewDelegate? { get set }

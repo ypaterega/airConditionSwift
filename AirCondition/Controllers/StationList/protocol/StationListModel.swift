@@ -7,16 +7,16 @@
 //
 
 import Foundation
-/*
+
 protocol StationListViewModelViewDelegate: class {
   
 }
-
+/*
 protocol StationListViewModelCoordinatorDelegate: class {
-    func stationListViewModelDidSelectData(_ viewModel: StationListViewModel)
+    func stationListViewModelDidSelectData(_ viewModel: StationListModelProtocol)
 }
 
-protocol StationListModel {
+protocol StationListModelProtocol {
     var coordinatorDelegate: StationListViewModelCoordinatorDelegate? { get set}
 }
 */

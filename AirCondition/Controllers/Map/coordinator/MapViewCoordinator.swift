@@ -34,7 +34,8 @@ class MapViewCoordinator: Coordinator {
 }
 
 extension MapViewCoordinator: MapViewModelCoordinatorDelegate {
-    func mapViewModelDidLogin(viewModel: MapViewModel) {
-     //   delegate?.mapViewCoordinatorDidFinish(mapViewCoordinator: self)
+ 
+    func mapViewModelDidLogin(viewModel: MapViewModelProtocol) {
+        delegate?.mapCoordinatorDidFinish(mapCoordinator: self)
     }
 }

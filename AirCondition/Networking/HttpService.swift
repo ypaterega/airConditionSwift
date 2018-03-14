@@ -6,63 +6,44 @@
 //  Copyright © 2018 Yuriy Paterega. All rights reserved.
 //
 
-// NOT FINISHED. Generics
-
-
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
-
-enum ServiceError: Error {
-    case cannotParse
-}
+import ObjectMapper
 
 class HttpService {
     
-    private let session: URLSession
+    // MARK: - Generic api calls
     
-    init(session: URLSession = URLSession.shared) {
-        self.session = session
-    }
+    typealias Completion<T> = (_ result: T) -> Void
     
-    typealias GetStationsCompletion = (_ result: [HSStation]) -> Void
-    typealias GetStationDetailsCompletion = (_ result: [HSStationDetails]) -> Void
-    typealias GetStationSensorsDetailsCompletion = (_ result: HSSensorsData) -> Void
-    typealias GetAirConditionCompletion = (_ result: HSAirConditionIndex) -> Void
-    
-    func getStations(completion: @escaping GetStationsCompletion) {
-        
-        Alamofire.request(APIRouter.getStations()).responseArray { (response : DataResponse <[HSStation]>) in
-            if let jsonArray = response.value {
-                completion(jsonArray)
-            }
+    private func arrayRequest<T: Mappable>(route: APIRouter, completion: @escaping Completion<[T]>) {
+        Alamofire.request(route).responseArray { (response: DataResponse<[T]>) in
+            response.value.map { completion($0) }
         }
     }
     
-    func getStationSensorsData(stationId: String, completion: @escaping GetStationDetailsCompletion) {
-        
-       Alamofire.request(APIRouter.getStationSensorsData(stationId: stationId)).responseArray { (response : DataResponse <[HSStationDetails]>) in
-            if let jsonArray = response.value {
-                completion(jsonArray)
-            }
+    private func request<T: Mappable>(route: APIRouter, completion: @escaping Completion<T>) {
+        Alamofire.request(route).responseObject { (response: DataResponse<T>) in
+            response.value.map { completion($0) }
         }
     }
     
-    func getSensorsData(sensorId: String , completion: @escaping GetStationSensorsDetailsCompletion) {
+    // MARK: - API Calls
     
-        Alamofire.request(APIRouter.getSensorsData(sensorId: sensorId)).responseObject { (response : DataResponse <HSSensorsData>) in
-            if let jsonArray = response.value {
-                completion(jsonArray)
-            }
-        }
+    func getStations(completion: @escaping Completion<[HSStation]>) {
+        arrayRequest(route: .getStations(), completion: completion)
     }
     
-    func getIndex(stationId: String , completion: @escaping GetAirConditionCompletion) {
-        
-        Alamofire.request(APIRouter.getIndex(stationId: stationId)).responseObject { (response : DataResponse <HSAirConditionIndex>) in
-            if let jsonArray = response.value {
-                completion(jsonArray)
-            }
-        }
+    func getStationSensorsData(stationId: String, completion: @escaping Completion<[HSStationDetails]>) {
+        arrayRequest(route: .getStationSensorsData(stationId: stationId), completion: completion)
+    }
+    
+    func getSensorsData(sensorId: String, completion: @escaping Completion<HSSensorsData>) {
+        request(route: .getSensorsData(sensorId: sensorId), completion: completion)
+    }
+    
+    func getIndex(stationId: String, completion: @escaping Completion<HSAirConditionIndex>) {
+        request(route: .getIndex(stationId: stationId), completion: completion)
     }
 }

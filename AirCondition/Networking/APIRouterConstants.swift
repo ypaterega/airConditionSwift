@@ -14,6 +14,7 @@ struct K {
     }
 }
 
+// MARK: - HTTPHeaderFields
 enum HTTPHeaderField: String {
     case authentication = "Authorization"
     case contentType = "Content-Type"

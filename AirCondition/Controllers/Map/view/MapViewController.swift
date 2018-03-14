@@ -36,7 +36,6 @@ class MapViewController: UIViewController {
                                        target: nil,
                                        action: #selector(openStationList))
         navItem.rightBarButtonItem = item
-        
         navBar.setItems([navItem], animated: false)
                 
         self.view.addSubview(navBar)

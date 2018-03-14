@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class MapViewModel: NSObject, MKMapViewDelegate {
+class MapViewModel: NSObject, MKMapViewDelegate, MapViewModelProtocol {
     
     weak var coordinatorDelegate: MapViewModelCoordinatorDelegate?
     let annotationsList = Observer([Annotations]())
@@ -36,6 +36,6 @@ class MapViewModel: NSObject, MKMapViewDelegate {
     }
     
     func openStationList() {
-         self.coordinatorDelegate?.mapViewModelDidLogin(viewModel: self)
+        self.coordinatorDelegate?.mapViewModelDidLogin(viewModel: self)
     }
 }
