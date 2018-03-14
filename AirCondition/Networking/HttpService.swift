@@ -62,12 +62,4 @@ class HttpService {
             }
         }
     }
-    
-    //TODO
-    /*func request<T: BaseMappable>(url: String, method: HTTPMethod, completion: @escaping Get<[T]>) {
-        Alamofire.request(url, method: method).responseArray { (response: DataResponse<[T]>) in
-            guard let array = response.value else { return }
-            completion(response.value)
-        }
-    }*/
 }

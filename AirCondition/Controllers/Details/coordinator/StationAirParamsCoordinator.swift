@@ -6,25 +6,28 @@
 //  Copyright © 2018 Yuriy Paterega. All rights reserved.
 //
 
-import Foundation
 import UIKit
-
-protocol StationAirParamsCoordinatorDelegate: class {
-  
+/*
+protocol StationAirParamslCoordinatorDelegate: class {
+   //func stationAirParamslCoordinatorDidFinish(stationAirParamslCoordinator: stationAirParamslCoordinator)
 }
 
-class StationAirParamsCoordinator: Coordinator {
-    weak var delegate: StationAirParamsCoordinatorDelegate?
-    let window: UIWindow
+class StationAirParamslCoordinator: Coordinator {
     
-    init(window: UIWindow) {
+    weak var delegate: StationAirParamslCoordinatorDelegate?
+    let dataItem: DataItem
+    var window: UIWindow
+    
+    init(window: UIWindow, dataItem: DataItem) {
         self.window = window
+        self.dataItem = dataItem
     }
     
     func start() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier: "StationAirParams") as? StationAirParamsViewController {
-            let viewModel =  StationAirParamsViewModel()
+        let storyboard = UIStoryboard(name: "MVVM-C", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "StationAirParamsl") as? StationAirParamslViewController {
+            let viewModel = StationAirParamslViewModel()
+            viewModel.model = StationAirParamslModel(stationAirParamslItem: dataItem)
             viewModel.coordinatorDelegate = self
             vc.viewModel = viewModel
             window.rootViewController = vc
@@ -32,8 +35,10 @@ class StationAirParamsCoordinator: Coordinator {
     }
 }
 
-extension StationAirParamsCoordinatorCoordinator: StationDetailsViewModelCoordinatorDelegate {
-    func stationDetailsViewModel(viewModel: StationDetailsViewModel) {
-        delegate?.stationListCoordinatorDidFinish(stationListCoordinator: self)
+extension StationAirParamslCoordinator: StationAirParamslViewModelCoordinatorDelegate {
+    
+    func stationAirParamslViewModelDidEnd(_ viewModel: StationAirParamslViewModel) {
+        delegate?.stationAirParamslCoordinatorDidFinish(stationAirParamslCoordinator: self)
     }
 }
+*/

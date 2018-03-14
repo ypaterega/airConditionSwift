@@ -23,6 +23,13 @@
 		1A3FA2222058458600D1F963 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA2212058458600D1F963 /* AppCoordinator.swift */; };
 		1A3FA225205845E300D1F963 /* StationListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA224205845E300D1F963 /* StationListCoordinator.swift */; };
 		1A3FA22820584B8A00D1F963 /* StationAirParamsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA22720584B8A00D1F963 /* StationAirParamsCoordinator.swift */; };
+		1A665B52205875FC00CFEF36 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B51205875FC00CFEF36 /* MapViewCoordinator.swift */; };
+		1A665B562058762600CFEF36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B552058762600CFEF36 /* MapViewController.swift */; };
+		1A665B582058763B00CFEF36 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B572058763B00CFEF36 /* MapViewModel.swift */; };
+		1A665B5C2058A15800CFEF36 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B5B2058A15800CFEF36 /* MapModel.swift */; };
+		1A665B5F2058A1C300CFEF36 /* StationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B5E2058A1C300CFEF36 /* StationListModel.swift */; };
+		1A665B632058A22500CFEF36 /* StationAirParamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B622058A22500CFEF36 /* StationAirParamsModel.swift */; };
+		1A665B652058B03300CFEF36 /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B642058B03300CFEF36 /* Annotations.swift */; };
 		1ADFCB202047713C00FAC3C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */; };
 		1ADFCB252047713C00FAC3C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB232047713C00FAC3C8 /* Main.storyboard */; };
 		1ADFCB272047713C00FAC3C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFCB262047713C00FAC3C8 /* Assets.xcassets */; };
@@ -78,6 +85,13 @@
 		1A3FA2212058458600D1F963 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1A3FA224205845E300D1F963 /* StationListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListCoordinator.swift; sourceTree = "<group>"; };
 		1A3FA22720584B8A00D1F963 /* StationAirParamsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAirParamsCoordinator.swift; sourceTree = "<group>"; };
+		1A665B51205875FC00CFEF36 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
+		1A665B552058762600CFEF36 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1A665B572058763B00CFEF36 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		1A665B5B2058A15800CFEF36 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		1A665B5E2058A1C300CFEF36 /* StationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListModel.swift; sourceTree = "<group>"; };
+		1A665B622058A22500CFEF36 /* StationAirParamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAirParamsModel.swift; sourceTree = "<group>"; };
+		1A665B642058B03300CFEF36 /* Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
 		1ADFCB1C2047713C00FAC3C8 /* AirCondition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirCondition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADFCB1F2047713C00FAC3C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ADFCB242047713C00FAC3C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +176,10 @@
 		1A3FA20E2057512C00D1F963 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				1A665B5A2058A13F00CFEF36 /* protocol */,
+				1A665B50205875DE00CFEF36 /* viewModel */,
+				1A665B4F205875D400CFEF36 /* view */,
+				1A665B4E205875C700CFEF36 /* coordinator */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -169,6 +187,7 @@
 		1A3FA20F2057514000D1F963 /* StationList */ = {
 			isa = PBXGroup;
 			children = (
+				1A665B5D2058A1AE00CFEF36 /* protocol */,
 				1A3FA223205845D000D1F963 /* coordinator */,
 				1A3FA2122057518800D1F963 /* viewModel */,
 				1A3FA2112057518400D1F963 /* view */,
@@ -179,6 +198,7 @@
 		1A3FA2102057515100D1F963 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				1A665B602058A1E700CFEF36 /* protocol */,
 				1A3FA22620584B6000D1F963 /* coordinator */,
 				1A3FA2142057528400D1F963 /* viewModel */,
 				1A3FA2132057528000D1F963 /* view */,
@@ -268,6 +288,54 @@
 				1A3FA22720584B8A00D1F963 /* StationAirParamsCoordinator.swift */,
 			);
 			path = coordinator;
+			sourceTree = "<group>";
+		};
+		1A665B4E205875C700CFEF36 /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1A665B51205875FC00CFEF36 /* MapViewCoordinator.swift */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		1A665B4F205875D400CFEF36 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1A665B552058762600CFEF36 /* MapViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1A665B50205875DE00CFEF36 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A665B572058763B00CFEF36 /* MapViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		1A665B5A2058A13F00CFEF36 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1A665B5B2058A15800CFEF36 /* MapModel.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		1A665B5D2058A1AE00CFEF36 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1A665B5E2058A1C300CFEF36 /* StationListModel.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		1A665B602058A1E700CFEF36 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1A665B622058A22500CFEF36 /* StationAirParamsModel.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 		1ADFCB132047713C00FAC3C8 = {
@@ -402,6 +470,7 @@
 			children = (
 				F98E2699204840B50094C980 /* Station.swift */,
 				1A31F1942048D0CD00C8EDBA /* StationAirParams.swift */,
+				1A665B642058B03300CFEF36 /* Annotations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,6 +685,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A665B582058763B00CFEF36 /* MapViewModel.swift in Sources */,
+				1A665B5F2058A1C300CFEF36 /* StationListModel.swift in Sources */,
 				F9EDBA5120481B1A00B398C1 /* HSSensorsDataValue.swift in Sources */,
 				F993322A2048131100CC8871 /* HSStationDetails.swift in Sources */,
 				1A3FA2222058458600D1F963 /* AppCoordinator.swift in Sources */,
@@ -625,17 +696,22 @@
 				F98E269520483ABD0094C980 /* Observer.swift in Sources */,
 				1A31F1992048D25E00C8EDBA /* StationAirParamsViewModel.swift in Sources */,
 				F993322C204814DF00CC8871 /* HSStationParameters.swift in Sources */,
+				1A665B632058A22500CFEF36 /* StationAirParamsModel.swift in Sources */,
+				1A665B652058B03300CFEF36 /* Annotations.swift in Sources */,
 				F9EDBA4F20481B0A00B398C1 /* HSSensorsData.swift in Sources */,
 				1A0A952720478323007561F8 /* HSStation.swift in Sources */,
 				F98E2692204837E20094C980 /* StationListCell.swift in Sources */,
 				1A31F1912048CD5000C8EDBA /* StationAirParamsCell.swift in Sources */,
+				1A665B562058762600CFEF36 /* MapViewController.swift in Sources */,
 				F98E269A204840B50094C980 /* Station.swift in Sources */,
 				1A31F18C2048AC9500C8EDBA /* HSStIndexLevel.swift in Sources */,
+				1A665B52205875FC00CFEF36 /* MapViewCoordinator.swift in Sources */,
 				F9CDF643204825EA007CDB00 /* StationListViewController.swift in Sources */,
 				1A0A952920478553007561F8 /* HSCity.swift in Sources */,
 				1A31F1952048D0CD00C8EDBA /* StationAirParams.swift in Sources */,
 				1A31F1932048CDA400C8EDBA /* StationAirParamsCellViewModel.swift in Sources */,
 				F98E269720483C960094C980 /* StationListCellViewModel.swift in Sources */,
+				1A665B5C2058A15800CFEF36 /* MapModel.swift in Sources */,
 				1A31F1972048D23500C8EDBA /* StationAirParamsViewController.swift in Sources */,
 				F9EDBA4D20481AB900B398C1 /* HSAirConditionIndex.swift in Sources */,
 				1A3FA21B205770E900D1F963 /* APIRouter.swift in Sources */,
@@ -812,7 +888,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AirCondition/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirCondition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -828,7 +904,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AirCondition/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ip.AirCondition;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -157,14 +157,14 @@ open class Request {
     ///
     /// - returns: The request.
     @discardableResult
-    open func authenticate(
+    open func MapView(
         user: String,
         password: String,
         persistence: URLCredential.Persistence = .forSession)
         -> Self
     {
         let credential = URLCredential(user: user, password: password, persistence: persistence)
-        return authenticate(usingCredential: credential)
+        return MapView(usingCredential: credential)
     }
 
     /// Associates a specified credential with the request.
@@ -173,7 +173,7 @@ open class Request {
     ///
     /// - returns: The request.
     @discardableResult
-    open func authenticate(usingCredential credential: URLCredential) -> Self {
+    open func MapView(usingCredential credential: URLCredential) -> Self {
         delegate.credential = credential
         return self
     }

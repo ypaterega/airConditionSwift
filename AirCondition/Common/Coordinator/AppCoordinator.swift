@@ -11,8 +11,6 @@ import UIKit
 
 class AppCoordinator: Coordinator {
 
-    fileprivate let STATION_LIST_KEY: String  = "StationList"
-    fileprivate let STATION_AIR_PARAMS_KEY: String  = "StationAirParams"
     fileprivate let MAP_VIEW_KEY: String  = "MapView"
     
     var window: UIWindow
@@ -27,16 +25,16 @@ class AppCoordinator: Coordinator {
     }
 }
 
-extension AppCoordinator: StationListCoordinatorDelegate {
+extension AppCoordinator: MapViewCoordinatorDelegate {
 
     func showStationList() {
-        let stationListCoordinator = StationListCoordinator(window: window)
-        coordinators[STATION_LIST_KEY] = stationListCoordinator
-        stationListCoordinator.delegate = self
-        stationListCoordinator.start()
+        let mapCoordinator = MapViewCoordinator(window: window)
+        coordinators[MAP_VIEW_KEY] = mapCoordinator
+        mapCoordinator.delegate = self
+        mapCoordinator.start()
     }
     
-    func stationListCoordinatorDidFinish(stationListCoordinator: StationListCoordinator) {
-        coordinators[STATION_LIST_KEY] = nil
+    func mapCoordinatorDidFinish(mapCoordinator: MapViewCoordinator) {
+        coordinators[MAP_VIEW_KEY] = nil
     }
 }
