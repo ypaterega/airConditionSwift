@@ -133,13 +133,37 @@
                     <view key="view" contentMode="scaleToFill" id="fhu-Gs-gtJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWB-t3-x61">
+                                <rect key="frame" x="187" y="269" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWL-gi-3qc" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="78" width="343" height="152"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CWB-t3-x61" firstAttribute="top" secondItem="gWL-gi-3qc" secondAttribute="bottom" constant="19" id="5sy-ze-m4P"/>
+                            <constraint firstItem="gWL-gi-3qc" firstAttribute="top" secondItem="b4s-iv-8JC" secondAttribute="top" constant="57" id="6Zh-c5-fOi"/>
+                            <constraint firstItem="gWL-gi-3qc" firstAttribute="leading" secondItem="b4s-iv-8JC" secondAttribute="leading" constant="16" id="QCL-oh-zHZ"/>
+                            <constraint firstItem="b4s-iv-8JC" firstAttribute="bottom" secondItem="CWB-t3-x61" secondAttribute="bottom" constant="398" id="ZZd-LJ-OIZ"/>
+                            <constraint firstItem="CWB-t3-x61" firstAttribute="centerX" secondItem="b4s-iv-8JC" secondAttribute="centerX" id="jfd-7b-gY8"/>
+                            <constraint firstItem="b4s-iv-8JC" firstAttribute="trailing" secondItem="gWL-gi-3qc" secondAttribute="trailing" constant="16" id="tdr-86-2Jt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="b4s-iv-8JC"/>
                     </view>
+                    <connections>
+                        <outlet property="chart" destination="gWL-gi-3qc" id="Mii-Ci-A4r"/>
+                        <outlet property="parameterName" destination="CWB-t3-x61" id="Rzo-LK-mPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ip-xr-Vs7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="69"/>
+            <point key="canvasLocation" x="356" y="68.815592203898049"/>
         </scene>
     </scenes>
 </document>

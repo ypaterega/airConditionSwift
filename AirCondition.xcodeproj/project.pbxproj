@@ -23,6 +23,8 @@
 		1A3FA2222058458600D1F963 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA2212058458600D1F963 /* AppCoordinator.swift */; };
 		1A3FA225205845E300D1F963 /* StationListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA224205845E300D1F963 /* StationListCoordinator.swift */; };
 		1A3FA22820584B8A00D1F963 /* StationAirParamsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3FA22720584B8A00D1F963 /* StationAirParamsCoordinator.swift */; };
+		1A5E617A205A1CE3001719F5 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E6179205A1CE3001719F5 /* SensorData.swift */; };
+		1A5E617C205A1D8A001719F5 /* SensorDataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5E617B205A1D8A001719F5 /* SensorDataValue.swift */; };
 		1A665B52205875FC00CFEF36 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B51205875FC00CFEF36 /* MapViewCoordinator.swift */; };
 		1A665B562058762600CFEF36 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B552058762600CFEF36 /* MapViewController.swift */; };
 		1A665B582058763B00CFEF36 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A665B572058763B00CFEF36 /* MapViewModel.swift */; };
@@ -85,6 +87,8 @@
 		1A3FA2212058458600D1F963 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1A3FA224205845E300D1F963 /* StationListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListCoordinator.swift; sourceTree = "<group>"; };
 		1A3FA22720584B8A00D1F963 /* StationAirParamsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAirParamsCoordinator.swift; sourceTree = "<group>"; };
+		1A5E6179205A1CE3001719F5 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
+		1A5E617B205A1D8A001719F5 /* SensorDataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataValue.swift; sourceTree = "<group>"; };
 		1A665B51205875FC00CFEF36 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		1A665B552058762600CFEF36 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1A665B572058763B00CFEF36 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -471,6 +475,8 @@
 				F98E2699204840B50094C980 /* Station.swift */,
 				1A31F1942048D0CD00C8EDBA /* StationAirParams.swift */,
 				1A665B642058B03300CFEF36 /* Annotations.swift */,
+				1A5E6179205A1CE3001719F5 /* SensorData.swift */,
+				1A5E617B205A1D8A001719F5 /* SensorDataValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -632,6 +638,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AirCondition/Pods-AirCondition-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
@@ -639,6 +646,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
@@ -699,6 +707,7 @@
 				1A31F1992048D25E00C8EDBA /* StationAirParamsViewModel.swift in Sources */,
 				F993322C204814DF00CC8871 /* HSStationParameters.swift in Sources */,
 				1A665B632058A22500CFEF36 /* StationAirParamsModel.swift in Sources */,
+				1A5E617C205A1D8A001719F5 /* SensorDataValue.swift in Sources */,
 				1A665B652058B03300CFEF36 /* Annotations.swift in Sources */,
 				F9EDBA4F20481B0A00B398C1 /* HSSensorsData.swift in Sources */,
 				1A0A952720478323007561F8 /* HSStation.swift in Sources */,
@@ -722,6 +731,7 @@
 				1A3FA21D2057749700D1F963 /* APIRouterConstants.swift in Sources */,
 				1A3FA22820584B8A00D1F963 /* StationAirParamsCoordinator.swift in Sources */,
 				1A3FA225205845E300D1F963 /* StationListCoordinator.swift in Sources */,
+				1A5E617A205A1CE3001719F5 /* SensorData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,8 @@
 //  Copyright © 2018 Yuriy Paterega. All rights reserved.
 //
 
+// TODO Add activity indicator in promise
+
 import Foundation
 import PromiseKit
 
@@ -16,7 +18,7 @@ class StationAirParamsViewModel: StationAirParamsViewModelProtocol {
     weak var coordinatorDelegate: StationAirParamsViewModelCoordinatorDelegate?
     var stationAirParams: String?
     
-    let stationAirParamsListCells = Observer([StationAirParamsCell]())
+    var sensorData = Observer(SensorData(key: "", values: []))
     
     var stationDetails:[HSStationDetails]?
     var sensorParameters:HSSensorsData?
@@ -53,14 +55,30 @@ class StationAirParamsViewModel: StationAirParamsViewModelProtocol {
         return Promise { data in
             httpService.getSensorsData(sensorId: String(sensorId), completion: { [weak self] result in
                 self?.sensorParameters = result
-                self?.buildChart(result)
+                self?.prepareDataChart(result)
                 data.fulfill(result)
             })
         }
     }
     
-   private func buildChart(_ data: HSSensorsData) {
-        
+   private func prepareDataChart(_ data: HSSensorsData) {
+    
+    //TO REFACTOR
+    
+    var values = [SensorDataValue]()
+
+    data.values = data.values?.filter { $0.value != nil }
+    
+    for dataValue in data.values! {
+            values.append(SensorDataValue(date: dataValue.date!, value: dataValue.value!))
+    }
+    
+    sensorData.value = SensorData(key: data.key!,
+                                  values: values)
+    }
+    
+    func closeDetails() {
+        coordinatorDelegate?.stationAirParamsViewModelDidEnd(self)
     }
 }
 
