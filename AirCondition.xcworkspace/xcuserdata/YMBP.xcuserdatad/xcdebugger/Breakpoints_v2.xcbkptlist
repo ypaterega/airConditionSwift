@@ -9,14 +9,126 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AirCondition/Networking/HttpService.swift"
-            timestampString = "541559266.58925"
+            filePath = "AirCondition/Controllers/StationList/protocol/StationListModel.swift"
+            timestampString = "542770440.471769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "getDataAllStations()"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "StationListViewModelCoordinatorDelegate"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AirCondition/Controllers/Details/view/StationAirParamsViewController.swift"
+            timestampString = "542770440.472676"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AirCondition/Controllers/Details/viewModel/StationAirParamsViewModel.swift"
+            timestampString = "542770440.473237"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "onLoad(stationId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AirCondition.StationAirParamsViewModel.onLoad(stationId: Swift.Int) -&gt; ()"
+                  moduleName = "AirCondition"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YMBP/Desktop/Git/airConditionSwift/airConditionSwift/AirCondition/Controllers/Details/viewModel/StationAirParamsViewModel.swift"
+                  timestampString = "542770440.616858"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "187">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;AirCondition.HSStationDetails&gt;) -&gt; () in AirCondition.StationAirParamsViewModel.onLoad(stationId: Swift.Int) -&gt; ()"
+                  moduleName = "AirCondition"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YMBP/Desktop/Git/airConditionSwift/airConditionSwift/AirCondition/Controllers/Details/viewModel/StationAirParamsViewModel.swift"
+                  timestampString = "542770440.619001"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AirCondition/Controllers/Details/view/StationAirParamsViewController.swift"
+            timestampString = "542770442.096841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AirCondition.StationAirParamsViewController.(bindViewModel in _7254EF8891B886CEB6BB66F9EE292032)() -&gt; ()"
+                  moduleName = "AirCondition"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YMBP/Desktop/Git/airConditionSwift/airConditionSwift/AirCondition/Controllers/Details/view/StationAirParamsViewController.swift"
+                  timestampString = "542770442.313333"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "215">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;AirCondition.StationAirParamsCell&gt;) -&gt; () in AirCondition.StationAirParamsViewController.(bindViewModel in _7254EF8891B886CEB6BB66F9EE292032)() -&gt; ()"
+                  moduleName = "AirCondition"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/YMBP/Desktop/Git/airConditionSwift/airConditionSwift/AirCondition/Controllers/Details/view/StationAirParamsViewController.swift"
+                  timestampString = "542770442.316249"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
