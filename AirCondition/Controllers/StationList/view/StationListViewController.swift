@@ -19,14 +19,31 @@ class StationListViewController: UITableViewController {
         viewModel.onLoad()
     }
     
-    private func bindViewModel() {
-        viewModel.stationListCells.bindAndFire() { [weak self] _ in
-            self?.tableView?.reloadData()
-        }
+    override func viewDidLayoutSubviews(){
+    
     }
     
-    internal override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+    private func setupNavBar() {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 60))
+        let navItem = UINavigationItem(title: "Stations list")
+        let item = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel,
+                                   target: nil,
+                                   action: #selector(openStationList))
+        navItem.leftBarButtonItem = item
+        navBar.setItems([navItem], animated: false)
+        
+        self.view.addSubview(navBar)
+    }
+    
+    @objc func openStationList() {
+        
+    }
+    
+    private func bindViewModel() {
+        viewModel.stationListCells.bind() { [weak self] _ in
+            self?.tableView?.reloadData()
+        }
     }
 }
 
@@ -45,5 +62,9 @@ extension StationListViewController {
             
         cell.viewModel = viewModel.stationListCells.value[indexPath.row] 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.openStation((indexPath as NSIndexPath).row)
     }
 }

@@ -16,10 +16,10 @@ class StationAirParamslCoordinator: Coordinator {
     
     weak var delegate: StationAirParamslCoordinatorDelegate?
     
-    let dataItem: String
+    let dataItem: Int
     var window: UIWindow
     
-    init(window: UIWindow, dataItem: String) {
+    init(window: UIWindow, dataItem: Int) {
         self.window = window
         self.dataItem = dataItem
     }
@@ -28,9 +28,9 @@ class StationAirParamslCoordinator: Coordinator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "StationAirParams") as? StationAirParamsViewController {
             let viewModel = StationAirParamsViewModel()
-           // viewModel.model = StationAirParamsModel(stationAirParamslItem: dataItem)
             viewModel.coordinatorDelegate = self
             vc.viewModel = viewModel
+            vc.dataItem = dataItem
             window.rootViewController = vc
         }
     }

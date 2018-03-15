@@ -8,13 +8,14 @@
 
 import Foundation
 
-class StationListViewModel {
+class StationListViewModel: StationListModelProtocol {
     
     let showLoading: Observer = Observer(false)
     
     weak var coordinatorDelegate: StationListViewModelCoordinatorDelegate?
     
     let stationListCells = Observer([StationListCellViewModel]())
+    var stations: [HSStation]?
     let httpService: HttpService
     
     init(httpService: HttpService = HttpService()) {
@@ -24,6 +25,7 @@ class StationListViewModel {
     func onLoad() {
         httpService.getStations(completion: { [weak self] result in
             self?.setCellsData(from: result)
+            self?.stations = result
         })
     }
     
@@ -35,6 +37,14 @@ class StationListViewModel {
                     gegrLon: model.gegrLon,
                     city: model.city?.name,
                     addressStreet: model.addressStreet)
+        }
+    }
+    
+    func openStation(_ index: Int) {
+        if let stations = stations, let coordinatorDelegate = coordinatorDelegate  , index < stations.count {
+            if let stationId = stations[index].id {
+                coordinatorDelegate.stationListViewModelDidSelectData(self, data: stationId)
+            }
         }
     }
 }

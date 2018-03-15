@@ -8,10 +8,12 @@
 
 import Foundation
 
-class StationAirParamsViewModel {
+class StationAirParamsViewModel: StationAirParamsViewModelProtocol {
     
     let showLoading: Observer = Observer(false)
+    
     weak var coordinatorDelegate: StationAirParamsViewModelCoordinatorDelegate?
+    var stationAirParams: String?
     
     let stationAirParamsListCells = Observer([StationAirParamsCell]())
     let httpService: HttpService
@@ -20,11 +22,9 @@ class StationAirParamsViewModel {
         self.httpService = httpService
     }
     
-    func onLoad() {
-     
-    }
+    func onLoad(stationId: Int) {
+        httpService.getStationSensorsData(stationId: String(stationId), completion: { [weak self] result in
     
-    private func setCellsData(from apiModel: HSAirConditionIndex) {
-
+        })
     }
 }

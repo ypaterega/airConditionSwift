@@ -6,6 +6,8 @@
 //  Copyright © 2018 Yuriy Paterega. All rights reserved.
 //
 
+// TO REFACTOR
+
 import Foundation
 
 protocol StationListCellViewModel {

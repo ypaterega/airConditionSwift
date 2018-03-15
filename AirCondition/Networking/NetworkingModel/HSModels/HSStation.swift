@@ -23,7 +23,7 @@ class HSStation: Mappable {
     }
     
     func mapping(map: Map) {
-        id  <- map["conditions"]
+        id  <- map["id"]
         stationName <- map["stationName"]
         gegrLat <- map["gegrLat"]
         gegrLon <- map["gegrLon"]

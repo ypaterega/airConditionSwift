@@ -9,7 +9,7 @@
 import Foundation
 
 protocol StationListViewModelCoordinatorDelegate: class {
-     func stationListViewModelDidSelectData(_ viewModel: StationListModelProtocol, data: String)
+     func stationListViewModelDidSelectData(_ viewModel: StationListModelProtocol, data: Int)
 }
 
 protocol StationListModelProtocol {

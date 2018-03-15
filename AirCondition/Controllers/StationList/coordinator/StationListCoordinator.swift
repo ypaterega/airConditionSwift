@@ -40,7 +40,7 @@ class StationListCoordinator: Coordinator {
 
 extension StationListCoordinator: StationListViewModelCoordinatorDelegate {
     func stationListViewModelDidSelectData(_ viewModel: StationListModelProtocol,
-                                           data: String) {
+                                           data: Int) {
         detailCoordinator = StationAirParamslCoordinator(window: window,
                                                          dataItem: data)
         detailCoordinator?.delegate = self
