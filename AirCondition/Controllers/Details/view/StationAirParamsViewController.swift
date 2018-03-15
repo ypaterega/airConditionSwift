@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Charts
 
-class StationAirParamsViewController: UIViewController {
+class StationAirParamsViewController: UIViewController, ChartViewDelegate {
     
     var viewModel: StationAirParamsViewModel = StationAirParamsViewModel()
     var dataItem: Int!
@@ -22,6 +22,8 @@ class StationAirParamsViewController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         bindViewModel()
+        
+        chart.delegate = self
         viewModel.onLoad(stationId: dataItem)
     }
     
@@ -43,12 +45,30 @@ class StationAirParamsViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.sensorData.bind() { [weak self] _ in
+        viewModel.sensorData.bindAndFire() { [weak self] _ in
             self?.setChartData()
         }
     }
     
     private func setChartData() {
         parameterName.text = self.viewModel.sensorData.value.key
+        
+        chart.noDataText = "Error 404 - something wrong"
+        
+        var dataEntries: [BarChartDataEntry] = []
+        var chartsDateData = [String]()
+        
+        let chartSensorData = self.viewModel.sensorData.value
+        
+        for i in 0..<chartSensorData.values.count {
+            let dataEntry = BarChartDataEntry(x: Double(i),
+                                              yValues: [Double(chartSensorData.values[i].value)])
+            chartsDateData.append(chartSensorData.values[i].date) //Dont know how set on x-axis
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "data")
+        let chartData = BarChartData(dataSet: chartDataSet)
+        chart.data = chartData
     }
 }

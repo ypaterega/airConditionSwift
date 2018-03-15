@@ -10,8 +10,8 @@ import Foundation
 
 class SensorData {
     
-    var key: String?
-    var values: [SensorDataValue]?
+    var key: String
+    var values: [SensorDataValue]
     
     init(key: String, values: [SensorDataValue]) {
         self.key = key

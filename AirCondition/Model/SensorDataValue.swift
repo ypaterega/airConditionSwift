@@ -10,8 +10,8 @@ import Foundation
 
 class SensorDataValue {
     
-    var date: String?
-    var value: Int?
+    var date: String
+    var value: Int
     
     init(date: String, value: Int) {
         self.date = date
